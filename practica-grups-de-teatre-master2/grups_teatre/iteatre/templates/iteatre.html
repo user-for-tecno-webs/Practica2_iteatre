@@ -1,0 +1,21 @@
+<html>
+	<head>
+	<title>{{ titlehead}}</title>
+	</head>
+<body>
+	<h1>{{ pagetitle }}</h1>
+	{% if user.username %}
+		<p>Benvingut {{ user.username }}!
+		Aquí podrà gestionar els grups de teatre!</p>
+		<ul>
+			<li><a href="/iteatre/ajuntaments/">Ajuntaments</a></li>
+			<li><a href="/iteatre/grupsdeteatre/">Grups de Teatre</a></li>
+			<li><a href="/iteatre/alumnat/">Alumnat</a></li>
+		</ul>
+	{% else %}
+		<p>No has loguejat:
+		Obligatori fer <a href="/login/">sign in</a>
+		per poder gestionar.</p>
+	{% endif %}
+</body>
+</html>

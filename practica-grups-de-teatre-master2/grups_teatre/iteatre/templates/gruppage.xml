@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grup-de-teatre>
+	<id>{{grup.id}}</id>
+	<nom>{{grup.nom}}</nom>
+	<data-comencament>{{grup.data_comencament}}</data-comencament>
+	<data-finalitzacio>{{grup.data_finalitzacio}}</data-finalitzacio>
+	<dies-i-hores>{{grup.dies_i_horaris}}</dies-i-hores>
+	<professo-ra>{{grup.cif}}</professo-ra>
+	<ajuntament-encarregat>{{grup.ajuntament}}</ajuntament-encarregat>
+</grup-de-teatre>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grups-de-teatre>
+{% if grups %}
+	{% for g in grups %}
+		<grup-de-teatre>
+			<id>{{g.id}}</id>
+			<nom>{{g.nom}}</nom>
+			<data-comencament>{{g.data_comencament}}</data-comencament>
+			<data-finalitzacio>{{g.data_finalitzacio}}</data-finalitzacio>
+			<dies-i-hores>{{g.dies_i_horaris}}</dies-i-hores>
+			<professo-ra>{{g.cif}}</professo-ra>
+			<ajuntament-encarregat>{{g.ajuntament}}</ajuntament-encarregat>
+		</grup-de-teatre>
+	{% endfor %}
+{% endif %}
+</grups-de-teatre>

@@ -1,0 +1,63 @@
+{% load staticfiles %}
+<head>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+</head>
+
+    <script>
+        $(function() {
+			$.getJSON("{% static "countries.json" %}", {}, function (countries) {
+                $("#id_pais").autocomplete({
+                    source: countries
+                });
+            });
+
+			$("#id_ciutat").autocomplete({
+                source: function( request, response ) {
+                    $.ajax({
+                        url: "http://api.geonames.org/searchJSON",
+                        dataType: "jsonp",
+                        data: {
+                            featureClass: "P",
+                            maxRows: 10,
+                            name_startsWith: request.term,
+                            username: "quanenpan"
+                        },
+                        success: function( data ) {
+                            response( $.map( data.geonames, function( item ) {
+                                return {
+                                    label: item.name + (item.adminName1 ? ", " + item.adminName1 : "") + ", " + item.countryName,
+                                    value: item.name,
+                                    stateOrProvince: item.adminName1,
+                                    countryName: item.countryName
+                                }
+                            }));
+                        }
+                    });
+            	},
+            	minLength: 2,
+        	});
+        });    
+	</script>  
+
+    <form method="post" enctype="multipart/form-data" action="">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Enviar"/>
+
+        {%if alumnat%}
+        <ul>
+            <a href="{% url 'iteatre:alumnae_detail' alumnat.id %}">enrrere</a>
+        </ul>
+        {% elif grupteatre %}
+        <ul>          
+            <a href="{% url 'iteatre:grupdeteatre_detail' grupteatre.id %}">enrrere</a>
+        </ul>
+        {% endif %}
+        
+        
+        
+    </form>

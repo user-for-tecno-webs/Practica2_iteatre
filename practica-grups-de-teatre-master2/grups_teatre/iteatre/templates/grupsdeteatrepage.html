@@ -1,0 +1,28 @@
+<html>
+	<head>
+	<title>Grups de teatre</title>
+	</head>
+<body>
+	{% if user.username %}
+		<h1>
+			Grups de teatre 			
+			(<a href="{% url 'iteatre:grupdeteatre_create' %}">add</a>)
+		</h1>
+		{% if grupsdeteatre %}
+		<ul>
+		{% for gt in grupsdeteatre %}
+		<li>
+			<a href="{% url 'iteatre:grupdeteatre_detail' gt.id %}">{{gt.nom}}</a>
+		</li>
+		{% endfor %}
+		</ul>
+		{% else %}
+		<p>No hi ha grups de teatre creats. </p>
+		{% endif %}
+		<a href="{% url 'iteatre:iteatre' %}">Tornar al Inici</a>
+	{% else %}
+	<p>has de loguejiar <a href="/login/">sign in</a>
+	per veure informacions.</p>
+	{% endif %}
+</body>	
+</html>

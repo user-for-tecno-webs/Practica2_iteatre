@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ajuntament>
+	<id>{{ajuntament.id}}</id>
+	<nom>{{ajuntament.nom}}</nom>
+	<telefon>{{ajuntament.telefon}}</telefon>
+	<email>{{ajuntament.email}}</email>
+	<adreca>{{ajuntament.adreca}}</adreca>
+	<cif>{{ajuntament.cif}}</cif>
+</ajuntament>

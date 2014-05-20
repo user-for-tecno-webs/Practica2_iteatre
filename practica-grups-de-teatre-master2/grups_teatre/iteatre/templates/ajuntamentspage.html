@@ -1,0 +1,29 @@
+<html>
+	<head>
+	<title>Ajuntaments</title>
+	</head>
+<body>
+	{% if user.username %}
+		<h1>Ajuntaments</h1>
+		{% if ajuntaments %}
+		<ul>
+		{% for ajuntament in ajuntaments %}
+		<li>
+		<a href="{% url 'iteatre:ajuntament_detail' ajuntament.id %}">{{ajuntament.nom}}</a>
+		</li>
+		{% endfor %}
+		</ul>
+		{% else %}
+		<p>No hi ha ajuntaments. </p>
+		{% endif %}
+		<a href="{% url 'iteatre:iteatre' %}">Tornar al Inici</a>
+	{% else %}
+	<p>has de loguejiar <a href="/login/">sign in</a>
+	per veure informacions.</p>
+	{% endif %}
+	
+</body>	
+</html>
+
+
+

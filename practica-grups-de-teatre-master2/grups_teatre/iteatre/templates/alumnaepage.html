@@ -1,0 +1,41 @@
+<html>
+	<head>
+	<title>Alumna/e</title>
+	</head>
+<body>
+	{% if user.username %}
+		<h1>
+			Alumna/e
+			{% if user == alumnat.user%}
+        	(<a href="{% url 'iteatre:alumnae_edit' alumnat.id %}">edit</a>)
+        	(<a href="{% url 'iteatre:alumnae_delete' alumnat.id %}">delete</a>)
+    		{% endif %}
+		</h1>
+		{% if alumnat %}
+		<ul>
+			<li>nom: {{alumnat.nom}}</li>
+			<li>telefon_personal: {{alumnat.telefon_personal}}</li>
+			<li>telefon_persona_encarregada: {{alumnat.telefon_persona_encarregada}}</li>
+			<li>email: {{alumnat.email}}</li>
+			<li>nif_nie: {{alumnat.nif_nie}}</li>
+			<li>compte_bancari: {{alumnat.compte_bancari}}</li>
+			<li>data_naixement: {{alumnat.data_naixement}}</li>
+			<li>curs: {{alumnat.curs}}</li>
+			<li>sexe: {{alumnat.sexe}}</li>
+			<li>pais: {{alumnat.pais}}</li>
+			<li>pais: {{alumnat.ciutat}}</li>
+			<li>grup_teatre: {{alumnat.grup_teatre}}</li>
+			<li>user: {{alumnat.user}}</li>
+		</ul>
+		{% else %}
+		<p>No hi ha alume de teatre creats. </p>
+		{% endif %}
+		<a href="{% url 'iteatre:alumnae_list' %}">Tornar al Alumnat</a>
+		<br/><br/>
+		<a href="{% url 'iteatre:iteatre' %}">Tornar al Inici</a>
+	{% else %}
+	<p>has de loguejiar <a href="/login/">sign in</a>
+	per veure informacions.</p>
+	{% endif %}
+</body>	
+</html>

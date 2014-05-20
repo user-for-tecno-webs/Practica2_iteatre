@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnat>
+{% if alumnat %}
+	{% for a in alumnat %}
+		<alumne>
+			<id>{{a.id}}</id>
+			<nom>{{a.nom}}</nom>
+			<telefon_personal>{{a.telefon_personal}}</telefon_personal>
+			<telefon_persona_encarregada>{{a.telefon_persona_encarregada}}</telefon_persona_encarregada>
+			<email>{{a.email}}</email>
+			<nif_nie>{{a.nif_nie}}</nif_nie>
+			<compte_bancari>{{a.compte_bancari}}</compte_bancari>
+			<data_naixement>{{a.data_naixement}}</data_naixement>
+			<curs>{{a.curs}}</curs>
+			<sexe>{{a.sexe}}</sexe>
+			<pais>{{a.pais}}</pais>
+			<grup_teatre>{{a.grup_teatre}}</grup_teatre>
+		</alumne>
+{% endfor %}
+{% endif %}
+</alumnat>

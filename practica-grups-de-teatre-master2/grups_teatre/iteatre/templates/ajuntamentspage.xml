@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ajuntaments>
+{% if ajuntaments %}
+	{% for a in ajuntaments %}
+		<ajuntament>
+			<id>{{a.id}}</id>
+			<nom>{{a.nom}}</nom>
+			<telefon>{{a.telefon}}</telefon>
+			<email>{{a.email}}</email>
+			<adreca>{{a.adreca}}</adreca>
+			<cif>{{a.cif}}</cif>
+		</ajuntament>
+{% endfor %}
+{% endif %}
+</ajuntaments>

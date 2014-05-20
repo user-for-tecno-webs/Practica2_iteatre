@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<alumne>
+	<id>{{alumnae.id}}</id>
+	<nom>{{alumnae.nom}}</nom>
+	<telefon_personal>{{alumnae.telefon_personal}}</telefon_personal>
+	<telefon_persona_encarregada>{{alumnae.telefon_persona_encarregada}}</telefon_persona_encarregada>
+	<email>{{alumnae.email}}</email>
+	<nif_nie>{{alumnae.nif_nie}}</nif_nie>
+	<compte_bancari>{{alumnae.compte_bancari}}</compte_bancari>
+	<data_naixement>{{alumnae.data_naixement}}</data_naixement>
+	<curs>{{alumnae.curs}}</curs>
+	<sexe>{{alumnae.sexe}}</sexe>
+	<pais>{{alumnae.pais}}</pais>
+	<grup_teatre>{{alumnae.grup_teatre}}</grup_teatre>
+</alumne>

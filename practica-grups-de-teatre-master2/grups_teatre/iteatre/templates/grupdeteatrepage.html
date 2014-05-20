@@ -1,0 +1,36 @@
+<html>
+	<head>
+	<title>Grup de teatre </title>
+	</head>
+<body>
+	{% if user.username %}
+		
+		{% if grupteatre %}
+		<ul>
+		
+		<h1>Grup de teatre {{grupteatre.nom}}
+		{% if user == grupteatre.user %}
+        (<a href="{% url 'iteatre:grupdeteatre_edit' grupteatre.id %}">edit</a>)
+        (<a href="{% url 'iteatre:grupdeteatre_delete' grupteatre.id %}">delete</a>)
+    	{% endif %}
+		</h1>
+
+			<li>ajuntament: {{grupteatre.ajuntament}}</li>
+			<li>nom: {{grupteatre.nom}}</li>
+			<li>data_comencament: {{grupteatre.data_comencament}}</li>
+			<li>data_finalitzacio: {{grupteatre.data_finalitzacio}}</li>
+			<li>dies_i_horaris: {{grupteatre.dies_i_horaris}}</li>
+			<li>user: {{grupteatre.user}}</li>
+		</ul>
+		{% else %}
+		<p>No hi ha grup de teatre creat. </p>
+		{% endif %}
+		<a href="{% url 'iteatre:grupdeteatre_list' %}">Tornar al Grups de Teatre</a>
+		<br/><br/>
+		<a href="{% url 'iteatre:iteatre' %}">Tornar al Inici</a>
+	{% else %}
+	<p>has de loguejiar <a href="/login/">sign in</a>
+	per veure informacions.</p>
+	{% endif %}
+</body>	
+</html>

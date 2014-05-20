@@ -1,0 +1,29 @@
+<html>
+	<head>
+	<title>Ajuntament</title>
+	</head>
+<body>
+	{% if user.username %}
+		<h1>Ajuntament</h1>
+		{% if ajuntament %}
+		<ul>	 
+			<li>Nom: {{ajuntament.nom}} </li>
+			<li>adreca: {{ajuntament.adreca}}</li>
+			<li>telefon: {{ajuntament.telefon}}</li>
+			<li>email: {{ajuntament.email}}</li>
+			<li>cif: {{ajuntament.cif}}</li>
+		</ul>
+		{% else %}
+		<p>No hi ha ajuntament. </p>
+		{% endif %}
+		<a href="{% url 'iteatre:ajuntament_list' %}">Tornar al Ajuntaments</a>
+		<br/><br/>
+		<a href="{% url 'iteatre:iteatre' %}">Tornar al Inici</a>
+	{% else %}
+	<p>has de loguejiar <a href="/login/">sign in</a>
+	per veure informacions.</p>
+	{% endif %}
+	
+</body>	
+</html>
+
