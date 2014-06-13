@@ -90,8 +90,8 @@ urlpatterns += patterns('',
     url(r'^api/grupteatre/(?P<pk>\d+)/$', APIGrupTeatreDetail.as_view(), name='grupteatre-detail'),
     url(r'^api/alumnat/$', APIAlumnatList.as_view(), name='alumnat-list'),
     url(r'^api/alumnat/(?P<pk>\d+)/$', APIAlumnatDetail.as_view(), name='alumnat-detail'),
-	url(r'^api/grupteatrequalificacions/$', APIGrupTeatreQualificacioList.as_view(), name='grupteatrequalificacio-list'),
-	url(r'^api/grupteatrequalificacions/(?P<pk>\d+)/$', APIGrupTeatreQualificacioDetail.as_view(), name='grupteatrequalificacio-detail'),
+    # url(r'^api/grupteatrequalificacions/$', APIGrupTeatreQualificacioList.as_view(), name='grupteatrequalificacio-list'),
+    # url(r'^api/grupteatrequalificacions/(?P<pk>\d+)/$', APIGrupTeatreQualificacioDetail.as_view(), name='grupteatrequalificacio-detail'),
 
 )
 
