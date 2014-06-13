@@ -36,7 +36,6 @@ class GrupTeatre(models.Model):
 		for qualificacio in self.grupteatrequalificacio_set.all():
 			ratingSum += qualificacio.rating
 		qualificacioCount = self.grupteatrequalificacio_set.count()
-		print qualificacioCount
 		return ratingSum/qualificacioCount
 		
 class Alumnat(models.Model):

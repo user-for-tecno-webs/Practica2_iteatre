@@ -73,7 +73,7 @@ def qualificacio(request, pk):
 		user=request.user,
 		grupTeatre=grupteatre)
 	qualificacio.save()
-	return HttpResponseRedirect(reverse('iteatre:grupdeteatre_detail', args=(grupteatre.id,)))
+	return HttpResponseRedirect(reverse('iteatre:grupteatre_detail', args=(grupteatre.id,)))
 
 class AlumnatDelete(DeleteView):
 	model = Alumnat

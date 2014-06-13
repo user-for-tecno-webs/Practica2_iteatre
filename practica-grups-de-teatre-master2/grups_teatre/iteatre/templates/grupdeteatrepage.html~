@@ -48,7 +48,7 @@
 		                {% endwith %}
 		            </p>
 		            <p property="description">{{ qualificacio.comentari }}</p>
-		            <p>Creat per <span property="author">{{ qualificacio.user }}</span> el
+		            <p>Created by <span property="author">{{ qualificacio.user }}</span> on
 		                <span property="publishDate">{{ qualificacio.dataPublicacio}}</span></p>
 		        </li>
 		    {% endfor %} 

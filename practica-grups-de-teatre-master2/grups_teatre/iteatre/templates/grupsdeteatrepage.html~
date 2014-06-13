@@ -11,7 +11,7 @@
 		<ul>
 			{% for gt in grupsdeteatre %}
 			<li>
-				<a href="{% url 'iteatre:grupdeteatre_detail' gt.id %}">{{gt.nom}}</a>
+				<a href="{% url 'iteatre:grupteatre_detail' gt.id %}">{{gt.nom}}</a>
 			</li>
 			{% empty %} <li>No hi ha cap grup de teatre registrat.</li>
 			{% endfor %}
